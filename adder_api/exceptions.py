@@ -1,9 +1,15 @@
 
 class IncorrectInputException(Exception):
-    pass
+    def __init__(self, *args: object) -> None:
+        super().__init__(*args)
+        self.error_code = 61
 
 class IncorrectInputTypeException(IncorrectInputException):
-    pass
+    def __init__(self, *args: object) -> None:
+        super().__init__(*args)
+        self.error_code = 62
 
 class IncorrectInputLengthException(IncorrectInputException):
-    pass
+    def __init__(self, *args: object) -> None:
+        super().__init__(*args)
+        self.error_code = 63
